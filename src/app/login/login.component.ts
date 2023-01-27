@@ -1,4 +1,6 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../Services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,7 @@ import { Component,OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {//3rd executed
   //class is a collection of properties and methods
-  constructor() {}//1st executed
+  constructor(private router:Router,private ds:DataService) {}//1st executed
          //used for object initialization
          //it automatically invokes when an object is created.
 
@@ -26,39 +28,49 @@ export class LoginComponent implements OnInit {//3rd executed
   pswd:any;
 
   account="please enter ur acno"
-  userDetails:any={
-    1000:{acno:1000,username:"adarsh",password:1000,balance:2000},
-    1001:{acno:1001,username:"ajay",password:1001,balance:2000},
-    1002:{acno:1002,username:"vimal",password:1002,balance:2000},
-  }
+  
   //userdefined functions//4th executed
-  logIn(){
+  // logIn(a:any,p:any){
+  //   var acno=a.value;
+  //   var pswd=p.value;
+  //   var userDetails=this.userDetails;
+
+  //   if(acno in userDetails){
+  //     if(pswd==userDetails[acno]['password']){
+  //       alert('login successful')
+  //     }
+  //     else{
+  //       alert('incorrect password')
+  //     }
+  //   }
+  //   else{
+  //     alert('user not found')
+  //   }
+  // }
+
+  login(){
     var acno=this.acno;
     var pswd=this.pswd;
-    var userDetails=this.userDetails;
-
-    if(acno in userDetails){
-      if(pswd==userDetails[acno]['password']){
-        alert('login successful')
-      }
-      else{
-        alert('incorrect password')
-      }
+   var userDetails=this.ds.userDetails
+    const result=this.ds.login(acno,pswd)
+    if(result){
+      alert('Login successful')
+      this.router.navigateByUrl('dashboard')
     }
     else{
-      alert('user not found')
+     alert('Login failure')
     }
-  }
-  acnoChange(event:any){
-    // console.log(event.target.value);
-    this.acno=event.target.value;
-    console.log(this.acno);
+  // acnoChange(event:any){
+  //   // console.log(event.target.value);
+  //   this.acno=event.target.value;
+  //   console.log(this.acno);
     
-  }
-  pswdchange(event:any){
-    // console.log(event.target.value);
-    this.pswd = event.target.value;
-    console.log(this.pswd);
+  // }
+  // pswdchange(event:any){
+  //   // console.log(event.target.value);
+  //   this.pswd = event.target.value;
+  //   console.log(this.pswd);
     
+  // }
   }
 }

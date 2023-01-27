@@ -1,0 +1,40 @@
+<div class="parent">
+    <div class="child">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <form action="" class="">
+                    <div class="img d-flex justify-content-center p-3"><img src="../../assets/bank.png" alt="" ></div>
+                     <h1 align="center" class="nme"><b>My Bank</b></h1>
+                     <input [(ngModel)]="acno" type="text" name="AccountNumber" id="depo_acno" class=" w-45 mt-3" placeholder="Account Number">
+                     <input [(ngModel)]="pswd" type="password" name="password" id="depo_pswd" class=" w-45 mt-3" placeholder="password">
+                     <input [(ngModel)]="amount" type="text" name="userName" class="w-45 mt-3" id="depo_name" placeholder="amount">
+                    <button type="button" (click)="deposit()" class="btn btn-primary w-45 mt-3">Deposit</button>
+                    <!-- <div class="text-center"> <br>
+                      <a routerLink=""><b>sign in</b></a> -->
+                    <!-- </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="child">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <form action="" class="">
+                    <div class="img d-flex justify-content-center p-3"><img src="../../assets/bank.png" alt="" ></div>
+                     <h1 align="center" class="nme"><b>My Bank</b></h1>
+                     <input [(ngModel)]="acno1" type="text" name="AccountNumber" id="with_acno" class=" w-45 mt-3" placeholder="Account Number">
+                     <input [(ngModel)]="pswd1" type="password" name="password" id="with_pswd" class=" w-45 mt-3" placeholder="password">
+                     <input [(ngModel)]="amount1" type="text" name="userName" class="w-45 mt-3" id="with_name" placeholder="amount">
+                     <button type="button" (click)="withdraw()" class="btn btn-primary w-45 mt-3">withdraw</button>
+                    <!-- <div class="text-center"> <br>
+                     <a routerLink=""><b>sign in</b></a>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

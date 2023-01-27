@@ -18,7 +18,7 @@
         3.run-ng serve --open   
 
 
-        1) Data blinding
+        1) Data binding
 
         To share data inside the component
 
@@ -34,5 +34,39 @@
           b)view to component
             b.1)event binding - syntax - (event_name)="function_name"
             b.2)Event binding using $Event - syntax - (event_name)="function_name($event)"
+            b.3)event binding using template referencing variable - #variable_name
+
+        1.2) two way binding
+        data share in both directions(TS to HTML and HTML to TS)  
+
+        ngModel (library) - import from formsmodule
+
+        import ngModel from FormsModule 
+
+        2)Angular Routing 
+        To set path for a component
+
+        {
+        path:'',component:LoginComponent
+       //'' - 4200 login
+        },
+       {
+        path:'dashboard',component:DashboardComponent
+      //'' - 4200/dashboard - register
+       }
+       -use routeroutlet inside the root component
+
+
+        3) Dependancy injection
+
+        To share data between two components
+        -here ew use constructor to achive this concept
+        eg-login to dashboard
+
+
+         4)angular services
+         To hold redundant data
+
+         to create service in angular- ng g s service_name
 
           

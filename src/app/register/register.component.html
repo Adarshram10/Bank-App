@@ -2,14 +2,14 @@
     <div class="col-4"></div>
     <div class="col-4">
         <form action="" class="">
-            <div class="img d-flex justify-content-center p-5"><img src="../../assets/bank.png" alt="" ></div>
+            <div class="img d-flex justify-content-center p-3"><img src="../../assets/bank.png" alt="" ></div>
              <h1 align="center" class="nme"><b>My Bank</b></h1>
-            <input type="text" name="userName" class="w-50" id="reg_name" placeholder="username">
-             <input type="text" name="AccountNumber" id="reg_acno" class=" w-50 mt-3" placeholder="Account Number">
-             <input type="password" name="password" id="reg_pswd" class=" w-50 mt-3" placeholder="password">
-            <button type="button" onclick="register()" class="btn btn-primary w-50 mt-3">Register</button>
+            <input [(ngModel)]="uname" type="text" name="userName" class="w-45" id="reg_name" placeholder="username">
+             <input [(ngModel)]="acno" type="text" name="AccountNumber" id="reg_acno" class=" w-45 mt-3" placeholder="Account Number">
+             <input [(ngModel)]="pswd" type="password" name="password" id="reg_pswd" class=" w-45 mt-3" placeholder="password">
+            <button type="button" (click)="register()" class="btn btn-primary w-45 mt-3">Register</button>
             <div class="text-center"> <br>
-             <a href="./index.html"><b>sign in</b></a>
+             <a routerLink=""><b>sign in</b></a>
             </div>
         </form>
     </div>

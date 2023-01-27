@@ -6,14 +6,21 @@
 body{
     background-color: rgb(253, 253, 253);
 }
+.child{
+  display: inline-block;
+  padding: 10px;
+  margin-left: -90px;
+  
+}
+
 .img img{
     height: 50px;
     width: 50px;
 
 }
 form{
-    width: 300px;
-    height: 410px;
+    width: 290px;
+    height: 380px;
     border-radius: 20px;
 background-color: rgb(252, 252, 252);
 box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 0px 0 #b9b9b9, 0 5px 0 rgba(125, 125, 125, 0.2), 0 6px 1px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 4px white, 0 0px 3px white, 1px 1px 5px rgba(255, 155, 0, 0.37), 1px 1px 10px rgba(102, 60, 0, 0.5); 
@@ -24,14 +31,15 @@ box-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 0px 0 #b9b9b9, 0 5px 
     padding: 100px;
 }
 .nme{
-    font-size: 30px;
+    font-size:30px;
     font-family: 'Yeon Sung', cursive;
 }
 input{
-    margin-left: 80px;
+    margin-left: 55px;
 }
 button{
-    margin-left: 80px;
+    width: 64%;
+    margin-left: 54px;
 }
 a{
     text-decoration: none;

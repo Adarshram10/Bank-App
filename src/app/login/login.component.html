@@ -2,15 +2,19 @@
     <div class="col-4"></div>
     <div class="col-4">
         <form action="" class="">
-            <div class="img d-flex justify-content-center p-5"><img src="../../assets/bank.png" alt="" ></div>
+            <div class="img d-flex justify-content-center p-3"><img src="../../assets/bank.png" alt="" ></div>
              <h1 align="center" class="nme"><b>My Bank</b></h1>
              <h6 align="center">{{aim}}</h6>
             
-             <input (change)="acnoChange($event)" type="text" name="AccountNumber" id="login_acno" class=" w-50" [placeholder]="account">
-             <input (change)="pswdchange($event)" type="password" name="password" id="login_pswd" class=" w-50 mt-3" placeholder="password">
-            <button type="button" (click)="logIn()" class="btn btn-primary w-50 mt-3">login</button>
+             <input [(ngModel)]="acno" type="text" name="AccountNumber" id="login_acno" class=" w-45" [placeholder]="account">
+                                                                                                                 <!-- property binding -->
+
+             <input [(ngModel)]="pswd" type="password" name="password" id="login_pswd" class=" w-45 mt-3" placeholder="password">
+             
+            <button type="button" (click)="login()" class="btn btn-primary w- mt-3">login</button>
+        
             <div class="text-center"> <br>
-               <a href="./signup.html"><b>sign up</b></a>
+               <a routerLink="register"><b>sign up</b></a>
             </div>
         </form>
     </div>
